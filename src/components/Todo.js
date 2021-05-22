@@ -30,6 +30,7 @@ export default function Todo({user}) {
       db.collection('todos').doc(user.uid).set({
           todos:[...mytodos,text]
       })
+        setText('')
      }
 
      const deleteTodo = (deleteTodo)=> {
